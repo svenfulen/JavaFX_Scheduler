@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="335.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_package.reports_help_controller">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Help - Reports" underline="true" />
+      <Label layoutX="14.0" layoutY="39.0" text="The Reports window can be used to generate the following reports:" />
+      <Label layoutX="14.0" layoutY="64.0" prefHeight="17.0" prefWidth="357.0" text="1. Tracking the number of appointments by month" />
+      <Label layoutX="14.0" layoutY="81.0" prefHeight="17.0" prefWidth="270.0" text="2. Tracking the number of appointments by week" />
+      <Label layoutX="14.0" layoutY="97.0" prefHeight="17.0" prefWidth="344.0" text="3. Tracking the number of appointment types in a given month" />
+      <Label layoutX="14.0" layoutY="114.0" prefHeight="17.0" prefWidth="351.0" text="4. Tracking the number of appointment types in a given week" />
+      <Label layoutX="14.0" layoutY="131.0" prefHeight="17.0" prefWidth="541.0" text="5. Showing all types of appointments and the number of each type of appointment in a given month" />
+      <Label layoutX="14.0" layoutY="148.0" prefHeight="17.0" prefWidth="541.0" text="6. Showing all types of appointments and the number of each type of appointment in a given week" />
+      <Label layoutX="14.0" layoutY="165.0" prefHeight="17.0" prefWidth="525.0" text="7. Showing a schedule of appointments for a given contact in a given month" />
+      <Label layoutX="14.0" layoutY="182.0" prefHeight="17.0" prefWidth="515.0" text="8. Showing a schedule of appointments for a given contact in a given week" />
+      <Label layoutX="14.0" layoutY="214.0" text="To generate the desired report:" />
+      <Label layoutX="14.0" layoutY="231.0" text="Step 1.  In the main window, select the desired timeframe using the date picker in the top-right corner." />
+      <Label layoutX="14.0" layoutY="248.0" prefHeight="17.0" prefWidth="542.0" text="Step 2. Click the &quot;View Reports&quot; button near the bottom-left of the main GUI" />
+      <Label layoutX="14.0" layoutY="275.0" prefHeight="17.0" prefWidth="566.0" text="After opening the Reports window, reports will be generated corresponding to the timeframe you selected." />
+      <Button fx:id="done_button" layoutX="275.0" layoutY="309.0" mnemonicParsing="false" onAction="#cancelButton" text="Done" />
+   </children>
+</AnchorPane>

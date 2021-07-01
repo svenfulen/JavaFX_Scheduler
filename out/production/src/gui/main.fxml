@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="735.0" prefWidth="1041.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_package.main_controller">
+   <children>
+      <Button layoutX="283.0" layoutY="24.0" mnemonicParsing="false" onAction="#delete_Appointment" prefHeight="25.0" prefWidth="114.0" text="Delete Selected" />
+      <Button fx:id="new_appointment_button" layoutX="32.0" layoutY="24.0" mnemonicParsing="false" onAction="#open_AddAppointment" prefHeight="10.0" prefWidth="114.0" text="New Appointment" />
+      <Button layoutX="156.0" layoutY="24.0" mnemonicParsing="false" onAction="#open_modifyAppointment" prefHeight="25.0" prefWidth="114.0" text="Edit Selected" />
+      <Button layoutX="32.0" layoutY="704.0" mnemonicParsing="false" onAction="#open_customerTable" prefHeight="25.0" prefWidth="114.0" text="View Customers" />
+      <TableView fx:id="appointments_table" layoutX="32.0" layoutY="60.0" prefHeight="638.0" prefWidth="984.0">
+        <columns>
+            <TableColumn fx:id="app_id_column" minWidth="2.0" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="cust_id_column" prefWidth="79.0" text="Customer ID" />
+            <TableColumn fx:id="app_title_column" prefWidth="87.0" text="Title" />
+            <TableColumn fx:id="app_desc_column" prefWidth="117.0" text="Description" />
+            <TableColumn fx:id="app_location_column" prefWidth="98.0" text="Location" />
+            <TableColumn fx:id="app_contact_column" prefWidth="115.0" text="Contact" />
+            <TableColumn fx:id="app_type_column" prefWidth="103.0" text="Type" />
+            <TableColumn fx:id="app_date_column" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="app_start_column" text="Start" />
+            <TableColumn fx:id="app_end_column" prefWidth="101.0" text="End" />
+
+
+        </columns>
+      </TableView>
+      <RadioButton fx:id="month_radio" layoutX="901.0" layoutY="15.0" mnemonicParsing="false" onAction="#selectMonthView" text="Month" />
+      <RadioButton fx:id="week_radio" layoutX="965.0" layoutY="15.0" mnemonicParsing="false" onAction="#selectWeekView" text="Week" />
+      <Label layoutX="751.0" layoutY="15.0" text="View Appointments By:" />
+      <Button layoutX="156.0" layoutY="704.0" mnemonicParsing="false" onAction="#open_Reports" text="View Reports" />
+      <Button fx:id="date_increment_button" layoutX="991.0" layoutY="36.0" mnemonicParsing="false" onAction="#incrementDate" text="&gt;" />
+      <TextField fx:id="date_display_field" editable="false" layoutX="751.0" layoutY="36.0" prefHeight="25.0" prefWidth="214.0" />
+      <Button fx:id="date_decrement_button" layoutX="965.0" layoutY="36.0" mnemonicParsing="false" onAction="#decrementDate" text="&lt;" />
+      <Button fx:id="all_appointments_button" layoutX="677.0" layoutY="11.0" mnemonicParsing="false" onAction="#showAllAppointments" text="Show All" />
+   </children>
+</AnchorPane>

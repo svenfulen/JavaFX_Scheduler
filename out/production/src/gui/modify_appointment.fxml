@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="340.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_package.modify_appointment_controller">
+   <children>
+      <Label layoutX="11.0" layoutY="16.0" text=" ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id_field" disable="true" layoutX="401.0" layoutY="13.0" prefHeight="25.0" prefWidth="93.0" promptText="id_field" text="ID" />
+      <Label layoutX="117.0" layoutY="45.0" text="Title" />
+      <TextField fx:id="title_field" layoutX="16.0" layoutY="62.0" prefHeight="25.0" prefWidth="224.0" />
+
+      <Label layoutX="98.0" layoutY="93.0" text="Description" />
+      <Label layoutX="263.0" layoutY="66.0" text="Location" />
+      <TextField fx:id="location_field" layoutX="320.0" layoutY="62.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="type_field" layoutX="320.0" layoutY="98.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="275.0" layoutY="102.0" text="Type" />
+      <DatePicker fx:id="date_select" layoutX="320.0" layoutY="144.0" />
+      <Spinner fx:id="end_spinner_hours" layoutX="355.0" layoutY="209.0" prefHeight="25.0" prefWidth="52.0" />
+      <Spinner fx:id="start_spinner_hours" layoutX="355.0" layoutY="177.0" prefHeight="25.0" prefWidth="52.0" />
+      <Label layoutX="285.0" layoutY="148.0" text="Date" />
+      <Label layoutX="285.0" layoutY="181.0" text="Start (24H)" />
+      <Label layoutX="288.0" layoutY="213.0" text="End (24H)" />
+      <Label layoutX="264.0" layoutY="266.0" text="Contact" />
+      <ChoiceBox fx:id="contact_select" layoutX="320.0" layoutY="262.0" prefHeight="25.0" prefWidth="174.0" />
+      <ChoiceBox fx:id="customer_select" layoutX="84.0" layoutY="262.0" prefHeight="25.0" prefWidth="156.0" />
+      <Label layoutX="16.0" layoutY="266.0" text="Customer" />
+      <Button fx:id="submit_button" layoutX="396.0" layoutY="297.0" mnemonicParsing="false" onAction="#addAppointment" text="Save" />
+      <Button fx:id="cancel_button" layoutX="442.0" layoutY="297.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancel" />
+      <Spinner fx:id="start_spinner_minutes" layoutX="422.0" layoutY="177.0" prefHeight="25.0" prefWidth="52.0" />
+      <Spinner fx:id="end_spinner_minutes" layoutX="422.0" layoutY="209.0" prefHeight="25.0" prefWidth="52.0" />
+      <TextArea fx:id="description_field" layoutX="17.0" layoutY="113.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="132.0" prefWidth="224.0" />
+      <Label layoutX="381.0" layoutY="17.0" text="ID:" />
+      <ChoiceBox fx:id="user_select" layoutX="84.0" layoutY="297.0" prefHeight="25.0" prefWidth="156.0" />
+      <Label layoutX="17.0" layoutY="301.0" text="User" />
+      <Label layoutX="13.0" layoutY="16.0" text="Edit Appointment">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

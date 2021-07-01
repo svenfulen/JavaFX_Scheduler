@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="262.0" prefWidth="226.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_package.add_customer_controller">
+   <children>
+      <Label layoutX="68.0" layoutY="4.0" text="Add Customer">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="39.0" text="Name" />
+      <Label layoutX="10.0" layoutY="70.0" text="Phone #" />
+      <Label layoutX="11.0" layoutY="100.0" text="Address" />
+      <Label layoutX="8.0" layoutY="131.0" text="Zip Code" />
+      <Button fx:id="submit_button" layoutX="113.0" layoutY="223.0" mnemonicParsing="false" onAction="#addCustomer" text="Add" />
+      <Button fx:id="cancel_button" layoutX="158.0" layoutY="223.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancel" />
+      <TextField fx:id="name_field" layoutX="62.0" layoutY="35.0" />
+      <TextField fx:id="phone_field" layoutX="62.0" layoutY="66.0" />
+      <TextField fx:id="address_field" layoutX="62.0" layoutY="96.0" />
+      <TextField fx:id="zip_field" layoutX="62.0" layoutY="127.0" />
+      <TextField fx:id="customer_id" disable="true" editable="false" layoutX="164.0" layoutY="4.0" prefHeight="25.0" prefWidth="48.0" />
+      <ComboBox fx:id="country_combo" layoutX="62.0" layoutY="159.0" onAction="#populateLocale" prefWidth="150.0" />
+      <ComboBox fx:id="region_combo" layoutX="62.0" layoutY="191.0" prefWidth="150.0" />
+      <Label layoutX="11.0" layoutY="163.0" text="Country" />
+      <Label layoutX="14.0" layoutY="195.0" text="Region" />
+   </children>
+</AnchorPane>

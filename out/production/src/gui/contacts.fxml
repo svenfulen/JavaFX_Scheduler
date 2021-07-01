@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="425.0" prefWidth="975.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_package.contacts_controller">
+   <children>
+      <TableView fx:id="contacts_table" layoutX="14.0" layoutY="37.0" onMouseClicked="#populateAppointments" prefHeight="350.0" prefWidth="238.0">
+        <columns>
+          <TableColumn fx:id="contact_id_column" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="contact_name_column" prefWidth="111.0" text="Name" />
+            <TableColumn fx:id="contact_email_column" prefWidth="137.0" text="Email" />
+        </columns>
+      </TableView>
+      <TableView fx:id="appointments_table" layoutX="263.0" layoutY="37.0" prefHeight="350.0" prefWidth="694.0">
+        <columns>
+          <TableColumn fx:id="appointment_id_column" minWidth="8.0" prefWidth="30.0" text="Appointment ID" />
+          <TableColumn fx:id="appointment_title_column" prefWidth="98.0" text="Title" />
+            <TableColumn fx:id="appointment_type_column" prefWidth="104.0" text="Type" />
+            <TableColumn fx:id="appointment_description_column" prefWidth="203.0" text="Description" />
+            <TableColumn fx:id="appointment_date_column" prefWidth="73.0" text="Date" />
+            <TableColumn fx:id="appointment_start_column" minWidth="0.0" prefWidth="70.0" text="Start" />
+            <TableColumn fx:id="appointment_end_column" prefWidth="66.0" text="End" />
+            <TableColumn fx:id="appointment_customerId_column" prefWidth="49.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="914.0" layoutY="398.0" mnemonicParsing="false" text="Close" />
+      <Label layoutX="14.0" layoutY="14.0" text="Contacts" />
+      <Label layoutX="263.0" layoutY="14.0" text="Appointments" />
+      <TextField fx:id="appointment_timeframe" editable="false" layoutX="740.0" layoutY="10.0" prefHeight="25.0" prefWidth="217.0" />
+   </children>
+</AnchorPane>
