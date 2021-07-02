@@ -11,7 +11,7 @@ import utils.database_connection;
  * C195 - Software II project
  * Scheduler App
  * @author Sven Fulenchek
- * @version 1.0
+ * @version 1.1
  */
 public class Main extends Application {
 

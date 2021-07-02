@@ -26,7 +26,7 @@ public class database_operation {
 
         // Check if the appointment overlaps any other appointments.
         for(Appointment appointment : all_appointments) {
-            if (time_convert.overlaps(new_appointment.getStartDateTimeLocal(), appointment.getStartDateTimeLocal(), appointment.getEndDateTimeLocal())){
+            if (time_convert.overlaps(new_appointment.getStartDateTimeLocal(), new_appointment.getEndDateTimeLocal(), appointment.getStartDateTimeLocal(), appointment.getEndDateTimeLocal())){
                 Message = "There is already an existing appointment during this time period for the contact " + appointment.getContactName() + ".";
             }
         }
@@ -50,7 +50,7 @@ public class database_operation {
 
         // Check if the appointment overlaps any other appointments.
         for(Appointment appointment : all_appointments) {
-            if (time_convert.overlaps(new_appointment.getStartDateTimeLocal(), appointment.getStartDateTimeLocal(), appointment.getEndDateTimeLocal())){
+            if (time_convert.overlaps(new_appointment.getStartDateTimeLocal(), new_appointment.getEndDateTimeLocal(), appointment.getStartDateTimeLocal(), appointment.getEndDateTimeLocal())){
                 Message = "There is already an existing appointment during this time period for the contact " + appointment.getContactName() + ".";
             }
         }

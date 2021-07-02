@@ -11,5 +11,7 @@
       <PasswordField fx:id="password_field" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="75.0" />
       <TextField fx:id="username_field" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="40.0" />
       <Label fx:id="locale_label" layoutX="221.0" layoutY="6.0" text="EN" />
+      <Label fx:id="time_zone_marker" layoutX="9.0" layoutY="6.0" text="Time Zone: " />
+      <Label fx:id="zone_id" layoutX="71.0" layoutY="6.0" text="est" />
    </children>
 </AnchorPane>

@@ -1,6 +1,6 @@
 06-29-2021
 ----------------------
-Scheduling Application v1.0
+Scheduling Application v1.1
 Author: Sven Fulenchek
 svenfulen@gmail.com
 ----------------------

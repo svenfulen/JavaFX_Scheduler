@@ -18,6 +18,7 @@ import utils.translate;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.ZoneId;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -29,16 +30,20 @@ public class login_controller {
     @FXML private Label username_label;
     @FXML private Label password_label;
     @FXML private Label locale_label;
+    @FXML private Label zone_id;
+    @FXML private Label time_zone_marker;
 
     /**
      * Determine the language for the login form and display the language as French if it is the system language.
      */
     public void initialize(){
         ResourceBundle rb_fr = ResourceBundle.getBundle("resource_bundles/main_fr", Locale.getDefault());
+        zone_id.setText(ZoneId.systemDefault().toString());
 
         // Get the default language from the JVM and translate the UI to french if needed
         if(Locale.getDefault().getLanguage().equals("fr")) {
             locale_label.setText("FR");
+            translate.translateText(time_zone_marker, rb_fr);
             translate.translateText(login_button, rb_fr);
             translate.translateText(username_label, rb_fr);
             translate.translateText(password_label, rb_fr);
@@ -88,13 +93,15 @@ public class login_controller {
 
         // Log in if the credentials are valid
         if (matchingUsername == null) {
-            utils.log.record_login(false);
             if(Locale.getDefault().getLanguage().equals("fr")) {
+                Main.user_name = username_field.getText();
                 ui_popups.errorMessage(rb_fr.getString("LoginError"));
             }
             else {
+                Main.user_name = username_field.getText();
                 ui_popups.errorMessage("You have entered an invalid username or password.");
             }
+            utils.log.record_login(false);
         }
         else {
             // Store user_name and user_id in the Main class to be accessed by the other parts of the application

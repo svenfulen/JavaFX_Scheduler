@@ -53,7 +53,7 @@ public class log {
             writeToLog("Login success at " + LocalDateTime.now().toString() + " - User: " + Main.user_name);
         }
         else {
-            writeToLog("Login failure at " + LocalDateTime.now().toString());
+            writeToLog("Login failure at " + LocalDateTime.now().toString() + " - User: " + Main.user_name);
         }
     }
 

@@ -100,11 +100,15 @@ public class time_convert {
      * @param existing_end The end time of the existing item that new_start is being checked against.
      * @return false if there is no overlap
      */
-    public static boolean overlaps(LocalDateTime new_start, LocalDateTime existing_start, LocalDateTime existing_end) {
+    public static boolean overlaps(LocalDateTime new_start, LocalDateTime new_end, LocalDateTime existing_start, LocalDateTime existing_end) {
         if(new_start.isAfter(existing_start) && new_start.isBefore(existing_end)){
             return true;
         }
         else if(new_start.equals(existing_start)){
+            return true;
+        }
+        else if(new_end.isAfter(existing_start) && new_start.isBefore(existing_end)) {
+            System.out.println(new_end + " is after " + existing_start);
             return true;
         }
         else {
